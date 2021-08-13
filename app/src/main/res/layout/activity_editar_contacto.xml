@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarContacto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                <TextView
+                    android:id="@+id/textViewEContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar contacto"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldNombreEContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputNombreEContacto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:hint="Nombre" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldApellidoEContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputApellidoEContacto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:hint="Apellido" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textEmailEContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@android:drawable/sym_action_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputNombreApellidoEContacto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:hint="Email" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="#fff"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Género"
+                            android:textSize="20sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupGeneroEContacto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkedButton="@+id/radio_button_Hombre"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/radio_button_HombreEContacto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="false"
+                                android:text="Hombre" />
+
+                            <RadioButton
+                                android:id="@+id/radio_button_MujerEContacto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Mujer" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textFieldTelefonoEContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@android:drawable/stat_sys_phone_call">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputTelefonoEContacto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:hint="Telefono"
+                        android:inputType="phone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnActualizarContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="actualizarContacto"
+                    android:padding="10dp"
+                    android:text="Editar Contacto"
+                    app:icon="@android:drawable/ic_input_add" />
+
+                <Button
+                    android:id="@+id/btnActualizarEliminarContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E91E63"
+                    android:onClick="eliminarcontacto"
+                    android:padding="10dp"
+                    android:text="Eliminar Contacto"
+                    app:icon="@android:drawable/ic_menu_close_clear_cancel" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

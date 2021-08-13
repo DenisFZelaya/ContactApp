@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F0F0"
+    android:orientation="vertical"
+    tools:context=".MenuUsuario">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="RecargarListaContactos"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="RecargarListaContactos"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="103dp"
+                app:srcCompat="@drawable/idcar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldNombreApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#F6F0F0"
+                android:gravity="center|center_horizontal"
+                android:hint="Nombre completo"
+                android:padding="0dp"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputNombreApellido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F6F0F0"
+                    android:gravity="center_horizontal"
+                    android:padding="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldEmailMenuUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#F6F0F0"
+                android:gravity="center_horizontal"
+                android:hint="Email"
+                android:padding="0dp"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:startIconDrawable="@android:drawable/sym_action_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputEmailMenuUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F6F0F0"
+                    android:padding="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_contactosView"
+            android:layout_width="match_parent"
+            android:layout_height="409dp"
+            android:layout_margin="10dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCrearContacto"
+            android:layout_width="86dp"
+            android:layout_height="70dp"
+            android:layout_gravity="fill_vertical|end"
+            android:background="#673AB7"
+            android:clickable="true"
+            android:foreground="@android:drawable/ic_input_add"
+            android:onClick="irCrearContacto"
+            app:backgroundTint="#9C27B0" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
